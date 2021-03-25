@@ -18,3 +18,6 @@ Route::get('/', function () {
 });
 
 route::get('/cadastro', 'App\Http\Controllers\ControllerCadastro@cadastro');
+route::get('/listaUsuario', 'App\Http\Controllers\ControllerCadastro@lista');
+
+route::post('/cadastro-exibir', 'App\Http\Controllers\ControllerCadastro@exibir')->name('cadastroExibir');

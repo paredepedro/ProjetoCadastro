@@ -14,19 +14,13 @@
     </style>
 </head>
 <body>
-    <div class="container" >
-
-        <h1 class="d-flex justify-content-center">Menu</h1>
-        <div class="d-flex justify-content-center">
-        <div class="btn-group-vertical" role="group">
-            <form method="GET" action="listaUsuario" class="row mt-2">
-                <button type="submit" class="btn btn-dark">Lista de Usuários</button>
-            </form>
-            <form method="GET" action="cadastro" class="row mt-2">
-                <button type="submit" class="btn btn-dark">Cadastrar Usuário</button>
-            </form>
-        </div>
-        </div>
+    <!-- O Resultado é {{$nomeCompleto}}, {{$dataNascimento}}, {{$senha}}, {{$matricula}}. -->
+    <div class="container">
+        <h1>Informações de Usuário:</h1>
+        <p>Nome completo - {{$nomeCompleto}}</p>
+        <p>Data de nascimento - {{$dataNascimento}}</p>
+        <p>Senha - {{$senha}}</p>
+        <p>Matricula - {{$matricula}}</p>
     </div>
 </body>
 </html>

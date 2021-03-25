@@ -16,12 +16,12 @@
 <body>
     <div class="container">
         <h1>Cadastro</h1>
-        <!-- <div class="row"> -->
-            <div class="form-group">
-                <label for="nomeCompleto" class="form-label">Nome Completo</label>
-                <input type="text" class="form-control" id="nomeCompleto" name="nome">
-            </div>
-        <!-- </div> -->
+        <form method="POST" action="{{route('cadastroExibir')}}">
+        @csrf  
+        <div class="form-group">
+            <label for="nomeCompleto" class="form-label">Nome Completo</label>
+            <input type="text" class="form-control" id="nomeCompleto" name="nome">
+        </div>
         <div class="form-group">
                 <label for="dataNascimento" class="form-label">Data de Nascimento</label>
                 <input type="date" class="form-control" id="dataNascimento" name="data">
@@ -37,6 +37,7 @@
         <div class="row mt-5">
             <button type="submit" class="btn btn-dark">Enviar</button>
         </div>
+        </form>
     </div>
 </body>
 </html>
