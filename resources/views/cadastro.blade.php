@@ -24,7 +24,7 @@
         </div>
         <div class="form-group">
                 <label for="dataNascimento" class="form-label">Data de Nascimento</label>
-                <input type="date" class="form-control" id="dataNascimento" name="data">
+                <input type="date" class="form-control" id="dataNascimento" name="data_nascimento">
         </div>
         <div class="form-group">
                 <label for="senha" class="form-label">Senha</label>

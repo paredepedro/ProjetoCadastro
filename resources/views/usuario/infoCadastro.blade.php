@@ -14,13 +14,24 @@
     </style>
 </head>
 <body>
-    <!-- O Resultado é {{$nomeCompleto}}, {{$dataNascimento}}, {{$senha}}, {{$matricula}}. -->
     <div class="container">
-        <h1>Informações de Usuário:</h1>
-        <p>Nome completo - {{$nomeCompleto}}</p>
-        <p>Data de nascimento - {{$dataNascimento}}</p>
-        <p>Senha - {{$senha}}</p>
-        <p>Matricula - {{$matricula}}</p>
+        <div class="row"><h1>Usuario salvo com sucesso!</h1></div>
+        <div class="row">
+            <div class="col-md-2">Nome</div>
+            <div class="col-md-10">{{$usuario->nome}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">Data de Nascimento</div>
+            <div class="col-md-10">{{$usuario->data_nascimento}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">Senha</div>
+            <div class="col-md-10">{{$usuario->senha}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">Matricula</div>
+            <div class="col-md-10">{{$usuario->matricula}}</div>
+        </div>
     </div>
 </body>
 </html>
