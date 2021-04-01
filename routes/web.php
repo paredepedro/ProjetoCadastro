@@ -18,6 +18,10 @@ Route::get('/', function () {
 });
 
 route::get('/cadastro', 'App\Http\Controllers\ControllerCadastro@cadastro');
-route::get('/listaUsuario', 'App\Http\Controllers\ControllerCadastro@lista');
+route::get('/lista-usuario', 'App\Http\Controllers\ControllerCadastro@lista')->name('listaUsuario');
 
 route::post('/cadastro-exibir', 'App\Http\Controllers\ControllerCadastro@salvar')->name('cadastroExibir');
+
+route::get('/editar-cadastro/{id}', 'App\Http\Controllers\ControllerCadastro@editaUsuario')->name('editaUsuario');
+route::get('/excluir-cadastro/{id}', 'App\Http\Controllers\ControllerCadastro@excluirUsuario')->name('deletaUsuario');
+route::post('/editar-salva', 'App\Http\Controllers\ControllerCadastro@salvarEdicao')->name('salvaEdicao');

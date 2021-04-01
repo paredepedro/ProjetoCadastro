@@ -24,4 +24,33 @@ class ControllerCadastro extends Controller
         // dd($usuario);
         return view('usuario.listaUsuario', compact('usuarios'));
     }
+    function editaUsuario($id){
+        
+        // dd($id);
+        $usuario = Usuario::where('id',$id)->first();
+        // dd($usuario);
+        return view('usuario.editacadastro', compact('usuario'));
+    }
+
+    function salvarEdicao(Request $request){
+        
+        $usuario = Usuario::where('id',$request->id)->first();
+        $usuario->nome = $request->nome;
+        $usuario->data_nascimento = $request->data_nascimento;
+        $usuario->senha = $request->senha;
+        $usuario->matricula = $request->matricula;
+        $usuario->update();
+        // dd($usuario);
+        return redirect(route('listaUsuario'));
+    }
+    function excluirUsuario($id){
+        
+        // $usuario = Usuario::where('id',$id)->first();
+        Usuario::destroy($id);
+        // dd($usuario);
+        return redirect(route('listaUsuario'));
+    }
+
+
+
 }

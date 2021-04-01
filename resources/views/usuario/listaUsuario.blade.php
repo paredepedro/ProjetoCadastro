@@ -23,6 +23,8 @@
                 <th scope="col">Data de Nascimento</th>
                 <th scope="col">Matricula</th>
                 <th scope="col">Senha</th>
+                <th scope="col">Ações</th>
+                <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
@@ -33,6 +35,8 @@
                 <td>{{$usuario->data_nascimento}}</td>
                 <td>{{$usuario->matricula}}</td>
                 <td>{{$usuario->senha}}</td>
+                <td><a href="{{route('editaUsuario',$usuario->id)}}">Editar</a></td>
+                <td><a href="{{route('deletaUsuario',$usuario->id)}}">Excluir</a></td>
                 </tr>
                 @endforeach
             </tbody>
