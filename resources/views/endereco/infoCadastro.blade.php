@@ -18,22 +18,34 @@
         <div class="row">
             <div class="col"></div>
             <div class="col-10">
-                <div class="row"><h1>Usuario salvo com sucesso!</h1></div>
+                <div class="row"><h1>Endereco salvo com sucesso!</h1></div>
                 <div class="row">
                     <div class="col-md-2">CEP</div>
-                    <div class="col-md-10">{{$usuario->nome}}</div>
+                    <div class="col-md-10">{{$endereco->cep}}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2">Data de Nascimento</div>
-                    <div class="col-md-10">{{$usuario->data_nascimento}}</div>
+                    <div class="col-md-2">Logradouro:</div>
+                    <div class="col-md-10">{{$endereco->logradouro}}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2">Senha</div>
-                    <div class="col-md-10">{{$usuario->senha}}</div>
+                    <div class="col-md-2">Numero:</div>
+                    <div class="col-md-10">{{$endereco->numero}}</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-2">Matricula</div>
-                    <div class="col-md-10">{{$usuario->matricula}}</div>
+                    <div class="col-md-2">Complemento:</div>
+                    <div class="col-md-10">{{$endereco->complemento}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">Bairro:</div>
+                    <div class="col-md-10">{{$endereco->bairro}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">Cidade:</div>
+                    <div class="col-md-10">{{$endereco->cidade}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">Estado:</div>
+                    <div class="col-md-10">{{$endereco->estado}}</div>
                 </div>        
             </div>
             <div class="col"></div>

@@ -19,20 +19,20 @@
             <div class="col"></div>
             <div class="col-6">
                 <h1>Cadastro de Usuário</h1>
-                <form method="POST" action="{{route('salvaEdicaoUsuario')}}">
+                <form method="POST" action="{{route('cadastroExibirUsuario')}}">
                 @csrf  
-                <input type="hidden" name="id" value="{{$usuario->id}}">
+                
                         <label for="nomeCompleto" class="form-label">Nome Completoa</label>
-                        <input type="text" class="form-control" id="nomeCompleto" name="nome" value="{{$usuario->nome}}">
+                        <input type="text" class="form-control" id="nomeCompleto" name="nome">
                 
                         <label for="dataNascimento" class="form-label">Data de Nascimento</label>
-                        <input type="date" class="form-control" id="dataNascimento" value="{{$usuario->data_nascimento}}" name="data_nascimento">
+                        <input type="date" class="form-control" id="dataNascimento" name="data_nascimento">
                 
                         <label for="senha" class="form-label">Senha</label>
-                        <input type="password" class="form-control" id="senha" name="senha" value="{{$usuario->senha}}">
+                        <input type="password" class="form-control" id="senha" name="senha">
                 
                         <label for="matricula" class="form-label">Matricula</label>
-                        <input type="number" class="form-control" id="matricula" name="matricula" value="{{$usuario->matricula}}">
+                        <input type="number" class="form-control" id="matricula" name="matricula">
                 
                 <div class="row mt-5">
                     <button type="submit" class="btn btn-dark">Enviar</button>

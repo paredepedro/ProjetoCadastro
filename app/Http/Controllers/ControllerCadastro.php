@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Usuario;
+
 class ControllerCadastro extends Controller
 {
-    function cadastro(){
-        return view('cadastro');
+    public function cadastroUsuario(){
+        return view('usuario.cadastroUsu');
     }
-    function salvar(Request $request){
+    
+    public function salvar(Request $request){
         $usuario = new Usuario();
         $usuario->nome = $request->nome;
         $usuario->data_nascimento = $request->data_nascimento;
@@ -19,12 +21,12 @@ class ControllerCadastro extends Controller
         // dd($usuario);
         return view('usuario.infoCadastro', compact('usuario'));
     }
-    function lista(){
+    public function lista(){
         $usuarios = Usuario::All();
         // dd($usuario);
         return view('usuario.listaUsuario', compact('usuarios'));
     }
-    function editaUsuario($id){
+    public function editaUsuario($id){
         
         // dd($id);
         $usuario = Usuario::where('id',$id)->first();
@@ -32,7 +34,7 @@ class ControllerCadastro extends Controller
         return view('usuario.editacadastro', compact('usuario'));
     }
 
-    function salvarEdicao(Request $request){
+    public function salvarEdicao(Request $request){
         
         $usuario = Usuario::where('id',$request->id)->first();
         $usuario->nome = $request->nome;
@@ -43,7 +45,7 @@ class ControllerCadastro extends Controller
         // dd($usuario);
         return redirect(route('listaUsuario'));
     }
-    function excluirUsuario($id){
+    public function excluirUsuario($id){
         
         // $usuario = Usuario::where('id',$id)->first();
         Usuario::destroy($id);
@@ -51,6 +53,9 @@ class ControllerCadastro extends Controller
         return redirect(route('listaUsuario'));
     }
 
+    public function menu(){
+        return view('menu');
+    }
 
 
 }
