@@ -19,7 +19,7 @@
             <div class="col"></div>
             <div class="col-6">
                 <h1>Editar Cadastro de Endereço</h1>
-                <form method="POST" action="{{route('salvaEdicaoEndereco')}}">
+                <form method="POST" action="{{route('updateEndereco')}}">
                 @csrf  
                 <input type="hidden" name="id" value="{{$endereco->id}}">
                         <label for="cep" class="form-label">CEP</label>

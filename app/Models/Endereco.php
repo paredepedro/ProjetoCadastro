@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Endereco extends Model
 {
     use HasFactory;
+
+    public function usuario(){
+        return $this->belongsto(Usuario::class);
+    }
 }

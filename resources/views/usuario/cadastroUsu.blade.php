@@ -19,7 +19,7 @@
             <div class="col"></div>
             <div class="col-6">
                 <h1>Cadastro de Usuário</h1>
-                <form method="POST" action="{{route('cadastroExibirUsuario')}}">
+                <form method="POST" action="{{route('saveUsuario')}}">
                 @csrf  
                 
                         <label for="nomeCompleto" class="form-label">Nome Completoa</label>

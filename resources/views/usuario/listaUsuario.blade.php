@@ -35,8 +35,8 @@
                 <td>{{$usuario->data_nascimento}}</td>
                 <td>{{$usuario->matricula}}</td>
                 <td>{{$usuario->senha}}</td>
-                <td><a href="{{route('editaUsuario',$usuario->id)}}">Editar</a></td>
-                <td><a href="{{route('deletaUsuario',$usuario->id)}}">Excluir</a></td>
+                <td><a href="{{route('editUsuario',$usuario->id)}}">Editar</a></td>
+                <td><a href="{{route('deleteUsuario',$usuario->id)}}">Excluir</a></td>
                 </tr>
                 @endforeach
             </tbody>

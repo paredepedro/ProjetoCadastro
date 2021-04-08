@@ -19,7 +19,7 @@
             <div class="col"></div>
             <div class="col-6">
                 <h1>Cadastro de Usuário</h1>
-                <form method="POST" action="{{route('salvaEdicaoUsuario')}}">
+                <form method="POST" action="{{route('updateUsuario')}}">
                 @csrf  
                 <input type="hidden" name="id" value="{{$usuario->id}}">
                         <label for="nomeCompleto" class="form-label">Nome Completoa</label>

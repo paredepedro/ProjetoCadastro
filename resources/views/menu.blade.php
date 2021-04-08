@@ -45,25 +45,32 @@
                 <p></p>
                 <p style="text-align: center; font-size: 20px;"><b>Opções de usuário</b></p>
 
-                
-                    <form method="GET" action="cadastro-usuario" class="style-form">
+                    <a href="{{route('createUsuario')}}" class="btn btn-outline-dark">Cadastrar Usuário</a>
+                    <a href="{{route('listUsuario')}}" class="btn btn-outline-dark">Lista de Cadastro de Usuário</a>
+
+                    <!-- <form method="GET" action="cadastro-usuario" class="style-form">
                         <button type="submit" class="btn btn-outline-dark style-button">Cadastrar Usuário</button>
                     </form>
                     <form method="GET" action="lista-usuario" class="style-form">
                         <button type="submit" class="btn btn-outline-dark style-button">Lista de Cadastro de Usuário</button>
-                    </form>
+                    </form> -->
                 
 
                 <p style="text-align: center; font-size: 20px"><b>Opções de endereço</b></p>
 
-                
+                    <a href="{{route('createEndereco')}}" class="btn btn-outline-dark">Cadastrar Endereço</a>
+                    <a href="{{route('listEndereco')}}" class="btn btn-outline-dark">Lista de Cadastro de Endereço</a>
+                    <a href="{{route('createUsuarioEndereco')}}" class="btn btn-outline-dark">Cadastrar Endereco e Usuario</a>
+<!--                     
                     <form method="GET" action="cadastro-endereco" class="style-form">
                         <button type="sumbit" class="btn btn-outline-dark style-button">Cadastrar Endereço</button>
                     </form>
                     <form method="GET" action="lista-endereco" class="style-form">
                         <button type="sumbit" class="btn btn-outline-dark style-button">Lista de Cadastro de Endereço</button>
                     </form>
-                
+                    <form method="GET" action="usuario-endereco" class="style-form">
+                        <button type="sumbit" class="btn btn-outline-dark style-button">Cadastrar Endereco e Usuario</button>
+                    </form> -->
             </div>
             
             <div class="col"></div>

@@ -22,9 +22,12 @@
                 <th scope="col">CEP</th>
                 <th scope="col">Logradouro</th>
                 <th scope="col">Numero</th>
+                <th scope="col">Complemento</th>
                 <th scope="col">Bairro</th>
                 <th scope="col">Cidade</th>
                 <th scope="col">Estado</th>
+                <th scope="col">Usuario</th>
+                <th scope="col">Ação</th>
                 <th scope="col"></th>
                 </tr>
             </thead>
@@ -39,8 +42,9 @@
                 <td>{{$endereco->bairro}}</td>
                 <td>{{$endereco->cidade}}</td>
                 <td>{{$endereco->estado}}</td>
-                <td><a href="{{route('editaEndereco',$endereco->id)}}">Editar</a></td>
-                <td><a href="{{route('deletaEndereco',$endereco->id)}}">Excluir</a></td>
+                <td>{{$endereco->usuario->nome}}</td>
+                <td><a href="{{route('editEndereco',$endereco->id)}}">Editar</a></td>
+                <td><a href="{{route('deleteEndereco',$endereco->id)}}">Excluir</a></td>
                 </tr>
                 @endforeach
             </tbody>
